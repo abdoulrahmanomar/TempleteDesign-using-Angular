@@ -4,14 +4,9 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <div class="card" style="width: 18rem;" *ngFor="let recipe of recipes">
-                <img class="card-img-top" [src]="recipe.imagePath" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">{{recipe.name}}</h5>
-                  <p class="card-text">{{ recipe.description}}</p>
-                </div>
-              </div>
-            <app-recipe-item></app-recipe-item>
+            
+            <app-recipe-item *ngFor="let recipe of recipes" [recipes]="recipe" (selected)="onRecipeSelected(recipe)"></app-recipe-item>
+            
           </div>
     </div>
   </div>

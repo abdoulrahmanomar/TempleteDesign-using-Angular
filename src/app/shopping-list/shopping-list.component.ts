@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
 import {Ingrediant} from '../shared/ingrediant.model';
 @Component({
   selector: 'app-shopping-list',
@@ -10,9 +10,12 @@ ingrediants:Ingrediant[] = [
   new Ingrediant('apples',5),
   new Ingrediant('apples',5)
 ];
-  constructor() { }
-
-  ngOnInit() {
+constructor() { }
+  
+    ngOnInit() {
+    }
+    onIngrediantAdded(ingrediant: Ingrediant){
+       this.ingrediants.push(ingrediant);
+      
+    }
   }
-
-}
